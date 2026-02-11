@@ -1,6 +1,12 @@
+
+
+
 def find_the_redheads(names_dict):
     
-    redheads = filter(lambda name: names_dict[name].lower() == "red", names_dict.keys())
+    def find_redhead(i):
+        return names_dict[i].lower() == "red"
+    
+    redheads = filter(find_redhead, names_dict.keys())
     
     return list(redheads)
 

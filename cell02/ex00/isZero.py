@@ -1,4 +1,5 @@
-user_input = input("Enter a number: ")
+#!/usr/bin/env python3
+user_input = input()
 number = int(user_input)
 if number == 0:
     print("This number is equal to zero.")
