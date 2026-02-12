@@ -13,7 +13,7 @@ def checkmate(check):
             print("ไม่ใช่จตุรัส")
             return
         
-    # check if there is exactly one king
+    # check is one king
     king_count = 0
     for row in grid:
         king_count += row.count('K')
@@ -26,21 +26,23 @@ def checkmate(check):
     for row in grid:
         for piece in row:
             if piece not in valid_pieces:
-                print(f"หมาก {piece} ไม่ถูกต้อง")
+                print(f"{piece} ไม่ถูกต้อง")
                 return
     
-    # find king position
+    # king position
     king_pos = None
     for i in range(size):
         for j in range(size):
-            print([i, j], grid[i][j])
+            # print([i, j], grid[i][j])
             if grid[i][j] == 'K':
                 king_pos = [i, j]
+                break
+        if king_pos is not None:
+            break
     # print(f"King position: {king_pos}")
-    
-    kr, kc = king_pos 
 
-    #check king 
+#check king 
+    kr, kc = king_pos 
     #ตรง
     king_move = [[-1, 0], [1, 0], [0, -1], [0, 1]]
     for move in king_move:
@@ -56,6 +58,7 @@ def checkmate(check):
                 r = r + move[0]
                 c = c + move[1]
                 
+    
     # แนวทแยง
     pbq_move = [[-1, -1], [-1, 1], [1, -1], [1, 1]]
     for move in pbq_move:
@@ -82,7 +85,7 @@ def checkmate(check):
 def main():
     board = """\
 ....
-.P..
+.Q..
 ..K.
 ....
 """

@@ -1,5 +1,6 @@
-import sys
+#!/usr/bin/env python3
 
+import sys
 
 total_items = len(sys.argv)  
 only_params = total_items - 1

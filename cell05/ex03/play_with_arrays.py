@@ -6,3 +6,4 @@ for value in ori:
         new_array.append(value + 2)
 print(ori)
 print(set(new_array))
+#python3 play_with_arrays.py | cat -e

@@ -2,6 +2,7 @@ import sys
 if len(sys.argv) != 3:
         print("none")
 else:
+    # print(len(sys.argv))
     keyword = sys.argv[1]
     search_string = sys.argv[2]
     count = search_string.count(keyword)
