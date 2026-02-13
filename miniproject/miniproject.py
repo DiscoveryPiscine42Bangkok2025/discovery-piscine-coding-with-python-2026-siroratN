@@ -8,7 +8,7 @@ def checkmate(check):
     
     # check gird
     for row in grid:
-        print(row)
+        # print(row)
         if len(row) != size:
             print("ไม่ใช่จตุรัส")
             return
@@ -33,7 +33,7 @@ def checkmate(check):
     king_pos = None
     for i in range(size):
         for j in range(size):
-            print([i, j], grid[i][j])
+            # print([i, j], grid[i][j])
             if grid[i][j] == 'K':
                 king_pos = [i, j]
                 break
@@ -79,7 +79,7 @@ def checkmate(check):
     for move in pbq_move:
         r = kr + move[0]
         c = kc + move[1]
-        print(kc)
+        # print(kc)
         if r >= 0 and r < size and c >= 0 and c < size:
             # เป็นเบี้ยไหม
             if grid[r][c] == 'P' and move[0] == -1: 
@@ -100,7 +100,7 @@ def checkmate(check):
 
 def main():
     board = """\
-....
+.R..
 .K..
 ....
 ....
